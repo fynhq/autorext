@@ -1,0 +1,164 @@
+:root {
+  color-scheme: light dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: Canvas;
+  color: CanvasText;
+  font: 14px/1.5 system-ui, sans-serif;
+}
+
+main {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+body.popup {
+  min-width: 300px;
+  padding: 14px 16px;
+}
+
+body.options {
+  padding: 40px 20px 64px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body.options h1 {
+  font-size: 24px;
+}
+
+.hint {
+  margin: 0 0 12px;
+  color: GrayText;
+  font-size: 13px;
+}
+
+.host {
+  margin: 0 0 12px;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.toggle {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle.disabled {
+  cursor: default;
+}
+
+.toggle input {
+  margin: 3px 0 0;
+  accent-color: #0a84ff;
+}
+
+.toggle input:disabled + span {
+  color: GrayText;
+}
+
+.link-button {
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: LinkText;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+}
+
+input[type="text"] {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid ButtonBorder;
+  border-radius: 6px;
+  background: Field;
+  color: FieldText;
+  font: inherit;
+}
+
+input[type="text"]:focus-visible {
+  outline: 2px solid #0a84ff;
+  outline-offset: 1px;
+}
+
+button {
+  padding: 8px 14px;
+  border: 1px solid ButtonBorder;
+  border-radius: 6px;
+  background: ButtonFace;
+  color: ButtonText;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: color-mix(in srgb, ButtonFace 85%, CanvasText);
+}
+
+.error {
+  margin: 10px 0 0;
+  color: #c62828;
+  font-size: 13px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .error {
+    color: #ff8a80;
+  }
+}
+
+.domain-list {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.domain-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.35);
+}
+
+.domain-list li span {
+  word-break: break-all;
+}
+
+.domain-list button {
+  padding: 4px 10px;
+  font-size: 13px;
+}
+
+.empty {
+  margin: 16px 0 0;
+  color: GrayText;
+  font-size: 13px;
+}
+
+[hidden] {
+  display: none !important;
+}

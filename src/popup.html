@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title data-i18n="extensionName">AutoR</title>
+    <link rel="stylesheet" href="ui.css">
+  </head>
+  <body class="popup">
+    <main>
+      <h1 data-i18n="extensionName">AutoR</h1>
+      <p id="host" class="host"></p>
+      <label class="toggle">
+        <input id="auto-toggle" type="checkbox">
+        <span data-i18n="popupToggleLabel">Open Reader Mode automatically on this site</span>
+      </label>
+      <p id="note" class="hint" aria-live="polite"></p>
+      <button id="manage" type="button" class="link-button" data-i18n="popupManage">Manage full whitelist</button>
+    </main>
+    <script src="common.js"></script>
+    <script src="i18n.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

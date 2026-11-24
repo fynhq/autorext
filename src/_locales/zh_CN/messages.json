@@ -1,0 +1,69 @@
+{
+  "extensionName": {
+    "message": "自动阅读"
+  },
+  "extensionDescription": {
+    "message": "使用 Firefox 自带的阅读模式：在支持的文章页面自动打开，并可用快捷键切换。"
+  },
+  "commandDescription": {
+    "message": "打开 / 关闭阅读模式"
+  },
+  "popupToggleLabel": {
+    "message": "在此站点自动打开阅读模式"
+  },
+  "popupManage": {
+    "message": "管理全部白名单"
+  },
+  "popupNoteOn": {
+    "message": "可读页面会自动进入阅读模式。"
+  },
+  "popupNoteWhitelisted": {
+    "message": "该域名已在白名单中，不会自动打开。"
+  },
+  "popupNoteCovered": {
+    "message": "已被 $DOMAIN$ 覆盖，不会自动打开；请在设置中修改。",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "popupHostUnsupported": {
+    "message": "当前页面不支持白名单"
+  },
+  "popupUnsupportedHint": {
+    "message": "只能为 http 或 https 网站设置白名单。"
+  },
+  "optionsTitle": {
+    "message": "自动阅读 - 白名单"
+  },
+  "optionsHeading": {
+    "message": "白名单"
+  },
+  "optionsHint": {
+    "message": "白名单中的域名不会自动打开阅读模式，快捷键仍可手动切换。添加 example.com 会同时覆盖其子域名（如 www.example.com、news.example.com）；添加 www.example.com 则只覆盖该主机及其子域名。"
+  },
+  "domainAriaLabel": {
+    "message": "要加入白名单的域名"
+  },
+  "addButton": {
+    "message": "添加"
+  },
+  "removeButton": {
+    "message": "移除"
+  },
+  "removeLabel": {
+    "message": "移除 $DOMAIN$",
+    "placeholders": {
+      "domain": {
+        "content": "$1"
+      }
+    }
+  },
+  "optionsEmpty": {
+    "message": "白名单为空，所有支持阅读模式的页面都会自动打开。"
+  },
+  "errorInvalidDomain": {
+    "message": "请输入有效的域名，例如 example.com"
+  }
+}
