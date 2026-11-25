@@ -197,9 +197,11 @@ jobs:
           RESPONSE=$(curl -sS -w "\n%{http_code}" "$AMO_API/addon/$ADDON/versions/v$VERSION/")
           CODE=$(tail -n 1 <<<"$RESPONSE")
           BODY=$(sed '$d' <<<"$RESPONSE")
-          if [ "$CODE" = "404" ]; then
+          # AMO answers 401/403 (not 404) to anonymous requests for non-public add-ons,
+          # which is the normal state while a listed version is still in review.
+          if [ "$CODE" = "404" ] || [ "$CODE" = "401" ] || [ "$CODE" = "403" ]; then
             echo "public=false" >> "$GITHUB_OUTPUT"
-            echo "AMO does not expose version $VERSION yet (pending review or not submitted)."
+            echo "AMO does not expose version $VERSION to anonymous requests yet (HTTP $CODE; pending review or not submitted)."
             exit 0
           fi
           if [ "$CODE" != "200" ]; then
