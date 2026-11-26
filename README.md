@@ -1,7 +1,7 @@
 <a id="english"></a>
 
 <p align="center">
-  <img src="src/icons/icon-light-128.png" alt="AutoR logo" width="128" />
+  <img src="src/icons/icon-black-128.png" alt="AutoR logo" width="128" />
 </p>
 
 # AutoR
