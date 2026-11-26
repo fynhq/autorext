@@ -1,4 +1,4 @@
-const WHITELIST_KEY = "whitelist";
+const WHITELIST_KEY = "autor.whitelist.v1";
 
 function isReaderUrl(url) {
   return typeof url === "string" && url.startsWith("about:reader?");
@@ -93,4 +93,35 @@ async function isAutoOpenAllowed(url) {
     return true;
   }
   return matchingWhitelistEntry(hostname, await readWhitelist()) === null;
+}
+
+function t(key, substitutions) {
+  try {
+    return browser.i18n.getMessage(key, substitutions) || key;
+  } catch {
+    return key;
+  }
+}
+
+function applyI18n(root) {
+  const scope = root || (typeof document !== "undefined" ? document : null);
+  if (!scope) {
+    return;
+  }
+  const doc = scope.ownerDocument || scope;
+  if (doc.documentElement) {
+    doc.documentElement.lang = browser.i18n.getUILanguage();
+  }
+  for (const element of scope.querySelectorAll("[data-i18n]")) {
+    element.textContent = t(element.getAttribute("data-i18n"));
+  }
+  for (const element of scope.querySelectorAll("[data-i18n-title]")) {
+    element.title = t(element.getAttribute("data-i18n-title"));
+  }
+  for (const element of scope.querySelectorAll("[data-i18n-aria-label]")) {
+    element.setAttribute("aria-label", t(element.getAttribute("data-i18n-aria-label")));
+  }
+  for (const element of scope.querySelectorAll("[data-i18n-placeholder]")) {
+    element.placeholder = t(element.getAttribute("data-i18n-placeholder"));
+  }
 }

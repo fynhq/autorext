@@ -1,4 +1,4 @@
-const STORAGE_KEY = "tabState";
+const STORAGE_KEY = "autor.tabState.v1";
 
 const AUTO_OPEN_DELAY_MS = 250;
 const RECHECK_DELAY_MS = 1200;
@@ -6,7 +6,7 @@ const RETRY_DELAY_MS = 1500;
 
 const pendingAutoOpen = new Map();
 
-const META_KEY = "tabMeta";
+const META_KEY = "autor.tabMeta.v1";
 const SKIP_SUPPRESS_MS = 3000;
 const STARTUP_GRACE_MS = 30000;
 

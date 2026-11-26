@@ -22,8 +22,8 @@ function render() {
 
     const remove = document.createElement("button");
     remove.type = "button";
-    remove.textContent = t("removeButton");
-    remove.setAttribute("aria-label", t("removeLabel", domain));
+    remove.textContent = t("remove");
+    remove.setAttribute("aria-label", t("removeFromWhitelistAria", domain));
     remove.addEventListener("click", () => removeDomain(domain));
 
     item.append(name, remove);
@@ -45,7 +45,7 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const domain = normalizeDomain(input.value);
   if (!domain) {
-    showError(t("errorInvalidDomain"));
+    showError(t("invalidDomain"));
     return;
   }
 
@@ -60,6 +60,7 @@ form.addEventListener("submit", async (event) => {
 });
 
 (async function init() {
+  applyI18n();
   domains = await readWhitelist();
   render();
 })();

@@ -37,6 +37,7 @@ manage.addEventListener("click", () => {
 });
 
 (async function init() {
+  applyI18n();
   const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
   const pageUrl = isReaderUrl(tab?.url) ? articleUrl(tab.url) : tab?.url;
   hostname = hostnameFromUrl(pageUrl);

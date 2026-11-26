@@ -1,14 +1,15 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title data-i18n="optionsTitle">AutoR - Whitelist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="optionsPageTitle">AutoR - Whitelist</title>
     <link rel="stylesheet" href="ui.css">
   </head>
   <body class="options">
     <main>
-      <h1 data-i18n="optionsHeading">Whitelist</h1>
-      <p class="hint" data-i18n="optionsHint">
+      <h1 data-i18n="whitelistHeading">Whitelist</h1>
+      <p class="hint" data-i18n="whitelistDesc">
         Domains on the whitelist won't open in Reader Mode automatically; the shortcut still works.
         Adding example.com also covers its subdomains (e.g. www.example.com, news.example.com).
       </p>
@@ -17,20 +18,19 @@
           id="domain"
           type="text"
           placeholder="example.com"
-          data-i18n-aria-label="domainAriaLabel"
+          data-i18n-aria-label="whitelistInputAria"
           autocomplete="off"
           spellcheck="false"
         >
-        <button type="submit" data-i18n="addButton">Add</button>
+        <button type="submit" data-i18n="add">Add</button>
       </form>
       <p id="error" class="error" role="alert" hidden></p>
       <ul id="list" class="domain-list"></ul>
-      <p id="empty" class="empty" data-i18n="optionsEmpty">
+      <p id="empty" class="empty" data-i18n="whitelistEmpty">
         The whitelist is empty. Reader Mode will open automatically on all supported pages.
       </p>
     </main>
-    <script src="common.js"></script>
-    <script src="i18n.js"></script>
+    <script src="shared.js"></script>
     <script src="options.js"></script>
   </body>
 </html>
