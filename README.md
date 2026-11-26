@@ -1,7 +1,10 @@
 <a id="english"></a>
 
 <p align="center">
-  <img src="src/icons/icon-black-128.png" alt="AutoR logo" width="128" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="src/icons/icon-white-1024.png">
+    <img src="src/icons/icon-black-1024.png" alt="AutoR logo" width="128" />
+  </picture>
 </p>
 
 # AutoR
