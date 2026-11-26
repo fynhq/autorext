@@ -15,34 +15,34 @@
     "message": "在此站点自动打开阅读模式"
   },
   "popupManage": {
-    "message": "管理全部白名单"
+    "message": "管理全部例外"
   },
   "popupNoteOn": {
     "message": "可读页面会自动进入阅读模式。"
   },
   "popupNoteWhitelisted": {
-    "message": "该域名已在白名单中，不会自动打开。"
+    "message": "该域名已列入例外，不会自动打开。"
   },
   "popupNoteCovered": {
     "message": "已被 $1 覆盖，不会自动打开；请在设置中修改。"
   },
   "popupHostUnsupported": {
-    "message": "当前页面不支持白名单"
+    "message": "当前页面不支持设置例外"
   },
   "popupUnsupportedHint": {
-    "message": "只能为 http 或 https 网站设置白名单。"
+    "message": "只能为 http 或 https 网站设置例外。"
   },
   "optionsPageTitle": {
-    "message": "自动阅读 - 白名单"
+    "message": "自动阅读 - 例外站点"
   },
   "whitelistHeading": {
-    "message": "白名单"
+    "message": "例外站点"
   },
   "whitelistDesc": {
-    "message": "白名单中的域名不会自动打开阅读模式，快捷键仍可手动切换。添加 example.com 会同时覆盖其子域名（如 www.example.com、news.example.com）；添加 www.example.com 则只覆盖该主机及其子域名。"
+    "message": "列入例外列表的域名不会自动打开阅读模式，快捷键仍可手动切换。添加 example.com 会同时覆盖其子域名（如 www.example.com、news.example.com）；添加 www.example.com 则只覆盖该主机及其子域名。"
   },
   "whitelistInputAria": {
-    "message": "要加入白名单的域名"
+    "message": "要加入例外列表的域名"
   },
   "add": {
     "message": "添加"
@@ -51,12 +51,12 @@
     "message": "请输入有效的域名，例如 example.com"
   },
   "whitelistEmpty": {
-    "message": "白名单为空，所有支持阅读模式的页面都会自动打开。"
+    "message": "例外列表为空，所有支持阅读模式的页面都会自动打开。"
   },
   "remove": {
     "message": "移除"
   },
   "removeFromWhitelistAria": {
-    "message": "从白名单中移除 $1"
+    "message": "从例外列表中移除 $1"
   }
 }

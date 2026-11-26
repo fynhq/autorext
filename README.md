@@ -11,7 +11,7 @@
 
 **Articles open. Quiet follows.**
 
-AutoR opens supported article pages in Firefox's built-in Reader Mode. It adds a per-site whitelist, a toolbar toggle, and a keyboard shortcut. Firefox 140+ desktop only; no data collection or network requests.
+AutoR opens supported article pages in Firefox's built-in Reader Mode. It adds a per-site exception list, a toolbar toggle, and a keyboard shortcut. Firefox 140+ desktop only; no data collection or network requests.
 
 English | [中文](#chinese)
 
@@ -21,9 +21,9 @@ English | [中文](#chinese)
 
 ## Usage
 
-- Reader Mode opens automatically on supported articles unless the site is whitelisted.
-- Use the toolbar popup to toggle the current site or manage the whitelist; `Ctrl+Alt+R` (`Ctrl+Cmd+R` on macOS) toggles manually at any time.
-- Adding `example.com` covers its subdomains; the most specific whitelist entry wins.
+- Reader Mode opens automatically on supported articles unless the site is in the exceptions.
+- Use the toolbar popup to toggle the current site or manage the exceptions; `Ctrl+Alt+R` (`Ctrl+Cmd+R` on macOS) toggles manually at any time.
+- Adding `example.com` covers its subdomains; the most specific exception wins.
 - Pressing Back from an auto-opened Reader page returns to the previous page. If the article was the tab's first page, the tab is closed unless pinned.
 - Settings stay local; there is no account, telemetry, or cloud service.
 
@@ -31,7 +31,7 @@ English | [中文](#chinese)
 
 - `tabs` — read the tab URL and `isArticle`, toggle Reader Mode, navigate back, or close tabs.
 - `webNavigation` — detect navigation and back events so Reader Mode is not reopened after leaving it.
-- `storage` — store the whitelist locally and per-tab state in session storage.
+- `storage` — store the exception list locally and per-tab state in session storage.
 
 ## Privacy
 
@@ -43,7 +43,7 @@ AutoR does not collect or transmit personal data. The manifest declares:
 }
 ```
 
-The whitelist stays in local storage. There are no host permissions, no content scripts, and no network requests.
+The exception list stays in local storage. There are no host permissions, no content scripts, and no network requests.
 
 ## Build from source
 
@@ -69,7 +69,7 @@ Released under the MIT License. See [LICENSE](LICENSE).
 
 **文章自开，静读自来。**
 
-AutoR 在 Firefox 识别出的文章页自动打开内置阅读模式，并提供按域名白名单、工具栏开关和快捷键。仅支持 Firefox 140+ 桌面版；不收集数据，不发起网络请求。
+AutoR 在 Firefox 识别出的文章页自动打开内置阅读模式，并提供按域名例外列表、工具栏开关和快捷键。仅支持 Firefox 140+ 桌面版；不收集数据，不发起网络请求。
 
 [English](#english) | 中文
 
@@ -79,9 +79,9 @@ AutoR 在 Firefox 识别出的文章页自动打开内置阅读模式，并提�
 
 ## 使用
 
-- 支持的文章页会自动打开阅读模式；白名单站点会跳过。
-- 用工具栏弹窗开关当前站点或管理白名单；`Ctrl+Alt+R`（macOS 为 `Ctrl+Cmd+R`）可随时手动切换。
-- 添加 `example.com` 会覆盖其子域名；更具体的白名单条目优先。
+- 支持的文章页会自动打开阅读模式；列入例外的站点会跳过。
+- 用工具栏弹窗开关当前站点或管理例外列表；`Ctrl+Alt+R`（macOS 为 `Ctrl+Cmd+R`）可随时手动切换。
+- 添加 `example.com` 会覆盖其子域名；更具体的例外条目优先。
 - 自动打开阅读模式后按“后退”会回到上一页；如果文章是标签页第一页，则关闭该标签页（固定标签页除外）。
 - 所有设置保存在本地；没有账号、遥测或云服务。
 
@@ -89,7 +89,7 @@ AutoR 在 Firefox 识别出的文章页自动打开内置阅读模式，并提�
 
 - `tabs` — 读取标签页 URL 和 `isArticle`，切换阅读模式，前进/后退或关闭标签页。
 - `webNavigation` — 检测导航和后退事件，避免离开阅读模式后又被自动打开。
-- `storage` — 本地保存白名单，并在会话存储中保存标签页状态。
+- `storage` — 本地保存例外列表，并在会话存储中保存标签页状态。
 
 ## 隐私
 
@@ -101,7 +101,7 @@ AutoR 不收集、不上传个人数据。manifest 中声明：
 }
 ```
 
-白名单只保存在本地存储中。扩展不申请主机权限，不注入内容脚本，不发起网络请求。
+例外列表只保存在本地存储中。扩展不申请主机权限，不注入内容脚本，不发起网络请求。
 
 ## 从源码构建
 

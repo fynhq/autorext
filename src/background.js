@@ -236,7 +236,7 @@ async function handleUpdate(tabId, changeInfo, tab) {
     !isReaderUrl(url) &&
     (state.handledUrl === null || !sameDocument(state.handledUrl, url));
 
-  if (eligible) {
+  if (eligible && (await isAutoOpenAllowed(url))) {
     scheduleAutoOpen(
       tabId,
       url,

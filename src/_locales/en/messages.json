@@ -15,34 +15,34 @@
     "message": "Open Reader Mode automatically on this site"
   },
   "popupManage": {
-    "message": "Manage full whitelist"
+    "message": "Manage exceptions"
   },
   "popupNoteOn": {
     "message": "Readable pages will open in Reader Mode automatically."
   },
   "popupNoteWhitelisted": {
-    "message": "This domain is on the whitelist and won't auto-open."
+    "message": "This domain is on the exceptions list and won't auto-open."
   },
   "popupNoteCovered": {
     "message": "Covered by $1, so it won't auto-open. Change this in Settings."
   },
   "popupHostUnsupported": {
-    "message": "Whitelisting is not available on this page"
+    "message": "Exceptions are not available on this page"
   },
   "popupUnsupportedHint": {
-    "message": "The whitelist only works for http and https sites."
+    "message": "The exceptions list only works for http and https sites."
   },
   "optionsPageTitle": {
-    "message": "AutoR - Whitelist"
+    "message": "AutoR - Exceptions"
   },
   "whitelistHeading": {
-    "message": "Whitelist"
+    "message": "Exceptions"
   },
   "whitelistDesc": {
-    "message": "Domains on the whitelist won't open in Reader Mode automatically; the shortcut still works. Adding example.com also covers its subdomains (e.g. www.example.com, news.example.com). Adding www.example.com covers only that host and its subdomains."
+    "message": "Domains on the exceptions list won't open in Reader Mode automatically; the shortcut still works. Adding example.com also covers its subdomains (e.g., www.example.com, news.example.com). Adding www.example.com covers only that host and its subdomains."
   },
   "whitelistInputAria": {
-    "message": "Domain to add to the whitelist"
+    "message": "Domain to add to the exceptions list"
   },
   "add": {
     "message": "Add"
@@ -51,12 +51,12 @@
     "message": "Enter a valid domain, such as example.com"
   },
   "whitelistEmpty": {
-    "message": "The whitelist is empty. Reader Mode will open automatically on all supported pages."
+    "message": "The exceptions list is empty. Reader Mode will open automatically on all supported pages."
   },
   "remove": {
     "message": "Remove"
   },
   "removeFromWhitelistAria": {
-    "message": "Remove $1 from the whitelist"
+    "message": "Remove $1 from the exceptions"
   }
 }
