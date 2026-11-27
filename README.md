@@ -2,8 +2,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="src/icons/logo-white-1024.png">
-    <img src="src/icons/logo-black-1024.png" alt="AutoR logo" width="128" />
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white-1024.png">
+    <img src="assets/logo-black-1024.png" alt="AutoR logo" width="128" />
   </picture>
 </p>
 
